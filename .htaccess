@@ -1,0 +1,4 @@
+# Redirect all requests to getQuote.php script (none others needed!)
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !/getQuote.php [NC]
+RewriteRule .* /getQuote.php [R=302,L]
