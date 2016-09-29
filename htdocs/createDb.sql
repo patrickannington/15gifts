@@ -39,7 +39,7 @@ INSERT INTO `test_table` (`id`, `randomQuotes`, `author`) VALUES
 (7, 'Good design adds value faster than it adds cost', 'Thomas C. Gale'),
 (8, 'Talk is cheap. Show me the code', 'Linus Torvalds'),
 (9, 'C is quirky, flawed, and an enormous success.', 'Dennis M. Ritchie'),
-(10, 'In theory, theory and practice are the same. In practice, they’re not', 'Yoggi Berra');
+(10, 'In theory, theory and practice are the same. In practice, they''re not', 'Yoggi Berra');
 
 
 SET FOREIGN_KEY_CHECKS=1;
