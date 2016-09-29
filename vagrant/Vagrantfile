@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  # Environment box
+  config.vm.box = "ubuntu/trusty32"
+
+  # Port forwarding
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Create a private network
+  config.vm.network "private_network", ip: "192.168.33.10"
+
+  # Create a public network
+  config.vm.network "public_network"
+
+  # Share the webapp docroot
+  config.vm.synced_folder "../", "/15gifts"
+
+  # Run the setup script
+  config.vm.provision :shell, path: "setup.sh"
+end
